@@ -41,7 +41,7 @@ const EN = {
   'tec.k':'03 / tools','tec.h':'My <em>tech stack</em>','tec.1':'Programming','tec.2':'Back-end and automation','tec.3':'Web structure','tec.4':'Interfaces','tec.6':'Studies and projects','tec.7':'Prototypes and AI','tec.8':'Version control',
   'exp.k':'04 / journey','exp.h':'Experience and <em>education</em>',
   'exp.1d':'2026 — present','exp.1h':'IT Section • Brazilian Army','exp.1p':'Technical support, infrastructure, development and automation of internal processes at the Sorocaba Regional Support Base. Built the WhatsApp Help Desk, the institutional website and the intranet.',
-  'exp.2d':'2021 — present','exp.2h':'Brazilian Army','exp.2p':'Administrative, operational and support duties, focused on responsibility, organization and problem solving.',
+  'exp.2d':'2021 — 2026','exp.2h':'Health Section • Brazilian Army','exp.2p':'Private, then Health Corporal, promoted on merit. Medical bill auditing, spending reports and charts in Excel, and recognized for mapping and improving processes. Transport Chief in a humanitarian operation on the Venezuelan border (2025).',
   'exp.3d':'in progress','exp.3h':'Systems Analysis and Development • FACENS','exp.3p':'Software development, databases, networks, software engineering and hands-on projects such as Smart Traffic Lights.',
   'ct.k':'05 / contact','ct.h':"Let's talk about <em>your opening?</em>",'ct.p':'I am available for interviews and open to opportunities in technology. Pick the channel you prefer.',
   'ct.send':'Send','ct.copy':'Copy','ct.in':'View my profile','ct.cvk':'résumé','ct.cv':'Open PDF',
