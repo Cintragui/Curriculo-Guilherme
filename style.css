@@ -306,16 +306,41 @@ a.cc:hover .cc-go{color:var(--green);transform:translate(3px,-3px)}
 .toast{position:fixed;left:50%;bottom:24px;z-index:120;transform:translate(-50%,20px);opacity:0;pointer-events:none;padding:12px 18px;border-radius:999px;background:var(--text);color:var(--bg);font-weight:600;font-size:.88rem;box-shadow:var(--shadow);transition:opacity .3s,transform .4s var(--ease-out)}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 
-/* dialog */
-dialog{background:var(--bg2);color:var(--text);border:1px solid var(--line-2);border-radius:20px;padding:34px;width:min(570px,calc(100% - 32px));box-shadow:0 25px 90px rgba(0,0,0,.6)}
-dialog[open]{animation:dlg .4s var(--ease-out)}
-@keyframes dlg{from{opacity:0;transform:translateY(16px) scale(.97)}}
-dialog::backdrop{background:rgba(0,0,0,.6);backdrop-filter:blur(5px)}
-dialog h2{font-size:1.7rem;margin:10px 0}
-dialog p,dialog li{color:var(--muted)}
-dialog li{margin:8px 0}
-.close-dialog{position:absolute;top:10px;right:16px;border:0;background:transparent;font-size:2rem;cursor:pointer;color:var(--text)}
-.dialog-disclaimer{font-size:.78rem;border-top:1px solid var(--line);padding-top:15px}
+/* dialog de projeto */
+dialog{background:var(--bg2);color:var(--text);border:1px solid var(--line-2);border-radius:22px;padding:0;width:min(860px,calc(100% - 24px));max-height:min(88vh,900px);box-shadow:0 25px 90px rgba(0,0,0,.6);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+dialog[open]{animation:dlg .45s var(--ease-out)}
+@keyframes dlg{from{opacity:0;transform:translateY(18px) scale(.97)}}
+dialog::backdrop{background:rgba(0,0,0,.62);backdrop-filter:blur(6px)}
+.dlg-head{position:relative;padding:34px 34px 26px;background:radial-gradient(ellipse at 90% 0%,color-mix(in srgb,var(--green) 22%,transparent),transparent 60%);border-bottom:1px solid var(--line)}
+.dlg-head h2{font-size:clamp(1.6rem,3.4vw,2.3rem);margin:8px 0 6px;letter-spacing:-.03em;line-height:1.15;padding-right:30px}
+.dlg-tagline{color:var(--muted);margin:0;max-width:640px;font-size:1.02rem}
+.dlg-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:22px}
+.dlg-stats div{padding:14px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.dlg-stats b{display:block;font-size:1.45rem;font-weight:800;color:var(--green);letter-spacing:-.02em;line-height:1.15}
+.dlg-stats span{font-size:.78rem;color:var(--muted)}
+.dlg-body{padding:28px 34px 8px;display:flex;flex-direction:column;gap:26px}
+.dlg-sec h3{font-family:var(--f-mono);font-size:.76rem;color:var(--green);text-transform:lowercase;margin:0 0 10px;font-weight:700}
+.dlg-sec h3::before{content:"// "}
+.dlg-sec>p{margin:0;color:var(--muted)}
+.dlg-sec>p strong{color:var(--text)}
+.dlg-feats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.dlg-feats div{padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--panel);transition:border-color .25s,transform .25s var(--ease-out)}
+.dlg-feats div:hover{border-color:var(--line-2);transform:translateY(-2px)}
+.dlg-feats b{display:block;font-size:.95rem;margin-bottom:3px}
+.dlg-feats span{font-size:.86rem;color:var(--muted);line-height:1.5;display:block}
+.dlg-flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.dlg-flow span{padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:var(--panel);font-size:.84rem;font-weight:600}
+.dlg-flow i{color:var(--green);font-style:normal;font-weight:800}
+.dlg-two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.dlg-box{padding:18px;border-radius:14px;border:1px solid var(--line);background:var(--panel)}
+.dlg-box.hl{border-color:var(--line-2);background:var(--green-soft)}
+.dlg-box ul{margin:0;padding-left:18px;color:var(--muted)}
+.dlg-box li{margin:5px 0;font-size:.9rem}
+.dlg-box p{margin:0;color:var(--muted);font-size:.92rem}
+.close-dialog{position:absolute;top:14px;right:18px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--panel);font-size:1.4rem;line-height:1;cursor:pointer;color:var(--text);transition:border-color .2s,transform .3s var(--ease-out)}
+.close-dialog:hover{border-color:var(--green);transform:rotate(90deg)}
+.dialog-disclaimer{font-size:.76rem;color:var(--muted);border-top:1px solid var(--line);margin:18px 34px 0;padding:14px 0 26px}
+@media(max-width:640px){.dlg-head{padding:28px 20px 20px}.dlg-body{padding:22px 20px 4px}.dlg-feats,.dlg-two{grid-template-columns:1fr}.dialog-disclaimer{margin:14px 20px 0}}
 
 /* ============ Responsivo ============ */
 @media(max-width:1060px){

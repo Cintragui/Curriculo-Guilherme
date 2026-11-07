@@ -137,6 +137,7 @@
           <li data-i18n="feat.l4">Pesquisa de satisfação após o atendimento</li>
         </ul>
         <div class="tags"><span>Node.js</span><span>JavaScript</span><span>whatsapp-web.js</span></div>
+        <button class="details" data-project="bot"><span data-i18n="more.full">Ver detalhes completos do projeto</span> <svg><use href="#i-arrow"/></svg></button>
         <p class="try" data-i18n="feat.try">→ Teste ao lado: abra um chamado e acompanhe ele no painel do técnico.</p>
       </div>
       <div class="demo-stage">
@@ -178,9 +179,9 @@
         <div class="project-visual traffic"><div class="traffic-grid"><span class="road horizontal"></span><span class="road vertical"></span><span class="signal red"></span><span class="signal green"></span><span class="car c1"></span><span class="car c2"></span><span class="car c3"></span><span class="traffic-label">SIMULAÇÃO • CONTROLE ADAPTATIVO</span></div></div>
         <div class="project-body">
           <span class="project-type" data-i18n="p4.type">ia • projeto acadêmico</span>
-          <h3 data-i18n="p4.h">Semáforos Inteligentes</h3>
-          <p data-i18n="p4.p">Protótipo de controle semafórico adaptativo com simulação SUMO e análise de fluxo de veículos para apoiar decisões sobre tempos de sinal.</p>
-          <div class="tags"><span>Python</span><span>SUMO</span><span>OpenCV</span><span data-i18n="tag.vc">Visão Computacional</span></div>
+          <h3 data-i18n="p4.h">SINALYX · Semáforos Inteligentes</h3>
+          <p data-i18n="p4.p">Plataforma de mobilidade que detecta veículos com IA em câmeras e vídeos, ajusta os tempos dos semáforos e mostra tudo numa central web, com simulação de cidade no SUMO.</p>
+          <div class="tags"><span>Python</span><span>Flask</span><span>YOLO</span><span>OpenCV</span><span>SUMO</span></div>
           <button class="details" data-project="traffic"><span data-i18n="more">Conhecer o projeto</span> <svg><use href="#i-arrow"/></svg></button>
         </div>
       </article>
@@ -240,12 +241,14 @@
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <dialog id="project-dialog" aria-labelledby="dialog-title">
-  <button id="close-dialog" class="close-dialog" aria-label="Fechar">×</button>
-  <span class="section-kicker" data-i18n="dlg.k">detalhes do projeto</span>
-  <h2 id="dialog-title"></h2>
-  <p id="dialog-text"></p>
-  <h3 data-i18n="dlg.h">Principais contribuições</h3>
-  <ul id="dialog-list"></ul>
+  <div class="dlg-head">
+    <button id="close-dialog" class="close-dialog" aria-label="Fechar">×</button>
+    <span class="project-type" id="dlgType"></span>
+    <h2 id="dialog-title"></h2>
+    <p class="dlg-tagline" id="dlgTag"></p>
+    <div class="dlg-stats" id="dlgStats"></div>
+  </div>
+  <div class="dlg-body" id="dlgBody"></div>
   <p class="dialog-disclaimer" data-i18n="dlg.d">Demonstrações e descrições públicas não incluem dados ou acessos internos da organização.</p>
 </dialog>
 
