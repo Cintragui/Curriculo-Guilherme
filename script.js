@@ -3,8 +3,8 @@
    Links vazios ficam desativados automaticamente.
    ========================================================= */
 const CONFIG = {
-  email: '',                                  // ex.: 'seu.email@gmail.com'
-  linkedin: '',                               // ex.: 'https://www.linkedin.com/in/seu-perfil/'
+  email: 'guicintradoraciotto@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/guilherme-cintra-doraciotto',
   github: 'https://github.com/Cintragui'
 };
 
