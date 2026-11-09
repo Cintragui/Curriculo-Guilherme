@@ -37,10 +37,11 @@ const EN = {
   'p2.type':'web • professional project','p2.h':'Institutional Website','p2.p':'Building and customizing pages, components and visuals for the institutional website of the Sorocaba Regional Support Base.',
   'p3.type':'web • professional project','p3.h':'Corporate Intranet','p3.p':'Organizing internal content and resources in a central web environment, focused on navigation, consistency and usability.',
   'p4.type':'ai • academic project','p4.h':'SINALYX · Smart Traffic Lights','p4.p':'A mobility platform that detects vehicles with AI on cameras and videos, adjusts traffic light timing and shows everything in a web control center, with a city simulated in SUMO.',
+  'p5.type':'web system • professional project','p5.h':'Inventory System','p5.p':'An app to audit IT equipment from a phone: it reads data from photos of the equipment, generates QR code labels and exports Excel and PDF reports.',
   'tag.vc':'Computer Vision','more':'Learn more','more.full':'See full project details',
   'tec.k':'03 / tools','tec.h':'My <em>tech stack</em>','tec.1':'Programming','tec.2':'Back-end and automation','tec.3':'Web structure','tec.4':'Interfaces','tec.6':'Studies and projects','tec.7':'Prototypes and AI','tec.8':'Version control',
   'exp.k':'04 / journey','exp.h':'Experience and <em>education</em>',
-  'exp.1d':'2026 — present','exp.1h':'IT Section • Brazilian Army','exp.1p':'Technical support, infrastructure, development and automation of internal processes at the Sorocaba Regional Support Base. Built the WhatsApp Help Desk, the institutional website and the intranet.',
+  'exp.1d':'2026 — present','exp.1h':'IT Section • Brazilian Army','exp.1p':'Technical support, infrastructure, development and automation of internal processes at the Sorocaba Regional Support Base. Built the WhatsApp Help Desk, the institutional website, the intranet and the inventory system.',
   'exp.2d':'2021 — 2026','exp.2h':'Health Section • Brazilian Army','exp.2p':'Private, then Health Corporal, promoted on merit. Medical bill auditing, spending reports and charts in Excel, and recognized for mapping and improving processes. Transport Chief in a humanitarian operation on the Venezuelan border (2025).',
   'exp.3d':'in progress','exp.3h':'Systems Analysis and Development • FACENS','exp.3p':'Software development, databases, networks, software engineering and hands-on projects such as Smart Traffic Lights.',
   'ct.k':'05 / contact','ct.h':"Let's talk about <em>your opening?</em>",'ct.p':'I am available for interviews and open to opportunities in technology. Pick the channel you prefer.',
@@ -76,6 +77,26 @@ const PROJECTS = {
       stack:['Node.js','JavaScript','whatsapp-web.js','Windows','Rede interna'],
       result:'O suporte passou a ter <strong>registro de tudo o que entra</strong>, status visível para quem pediu e avaliação de quem foi atendido. O projeto provou o valor da ideia e abriu caminho para a plataforma interna que hoje organiza o suporte, o despacho e a comunicação nas telas da unidade.',
       learned:['Projetar um fluxo de conversa simples para quem não é da área de TI','Automação com Node.js e integração com o WhatsApp','Tratar estados de um chamado (aberto, em atendimento, concluído)','Trabalhar em dupla para evoluir um protótipo até virar um sistema','Usar ferramentas de IA como apoio no desenvolvimento, validando cada fluxo na prática']
+    },
+    inventory:{
+      type:'sistema web • projeto profissional', title:'Sistema de Inventário',
+      tag:'Do celular à planilha: uma aplicação que cadastra os materiais de informática a partir de fotos e transforma a conferência em uma leitura de QR code.',
+      stats:[['13','campos padronizados por material'],['36','commits no repositório'],['14','backups diários mantidos'],['12','etiquetas QR por folha A4']],
+      challenge:'Conferir os materiais de informática significa ir de seção em seção, digitar patrimônio, série e especificações de cada equipamento e depois consolidar tudo. O objetivo foi <strong>reduzir a digitação, padronizar os dados e registrar cada mudança</strong>, usando o celular e sem enviar nenhuma imagem para fora da rede interna.',
+      flow:['Fotos do equipamento','OCR sugere os dados','Equipe revisa e salva','Etiqueta QR impressa','Conferência pelo celular','Relatório em Excel ou PDF'],
+      built:[
+        ['Cadastro a partir de fotos','OCR local com Tesseract lê etiquetas e telas de especificações, aceita fotos HEIC de iPhone e mostra as diferenças para a pessoa revisar antes de salvar.'],
+        ['Etiquetas com QR code','Etiqueta individual ou folha A4 com 12 por página. Ao escanear, a ficha do material abre direto no celular.'],
+        ['Modo conferência','Escolha da seção, leitura dos QR codes e marcação como localizado, divergente ou não localizado, com progresso e lista de pendentes.'],
+        ['Histórico completo','Mudanças de seção, arquivamento e resultados de conferência ficam registrados, com motivo quando exigido.'],
+        ['Relatórios','Exportação em Excel com as 13 colunas e em PDF com opção de fotos, respeitando os filtros da lista.'],
+        ['Painel e app instalável','Dashboard com gráficos, layout em cards no celular e ícone na tela inicial.'],
+        ['Segurança','Senhas com PBKDF2 (310 mil iterações), sessões que expiram em 8 horas, token CSRF e contas separadas de administrador e membro.'],
+        ['Backups e operação','Cópia automática diária do banco, backup completo em ZIP e utilitários de instalação e recuperação de acesso no Windows.']
+      ],
+      stack:['Python','SQLite','JavaScript','HTML5','CSS3','Tesseract OCR','Pillow','openpyxl','ReportLab','PWA'],
+      result:'Um <strong>piloto completo para rede interna</strong>: celular e computador usam o mesmo banco de dados, a leitura das fotos acelera o cadastro e, mesmo sem OCR disponível, cadastro, fotos e relatórios continuam funcionando.',
+      learned:['Lidar com fotos reais de celular, em que o OCR erra e a pessoa precisa revisar','Criar um servidor HTTP em Python sem framework, com sessões e controle de acesso','Modelar histórico para auditar cada mudança','Gerar Excel, PDF e QR codes no servidor','Projetar para falhas: backups, recuperação de acesso e funcionamento sem OCR']
     },
     portal:{
       type:'web • projeto profissional', title:'Portal Institucional',
@@ -146,6 +167,26 @@ const PROJECTS = {
       stack:['Node.js','JavaScript','whatsapp-web.js','Windows','Internal network'],
       result:'Support now has <strong>a record of everything that comes in</strong>, visible status for whoever asked and ratings from whoever was helped. The project proved the idea and paved the way for the internal platform that now organizes support, queues and on-screen communication at the unit.',
       learned:['Designing a simple conversation flow for non-technical users','Automation with Node.js and WhatsApp integration','Handling ticket states (open, in progress, closed)','Working as a pair to grow a prototype into a system','Using AI tools to support development, validating every flow in practice']
+    },
+    inventory:{
+      type:'web system • professional project', title:'Inventory System',
+      tag:'From phone to spreadsheet: an app that registers IT equipment from photos and turns the audit into a QR code scan.',
+      stats:[['13','standardized fields per item'],['36','commits in the repository'],['14','daily backups kept'],['12','QR labels per A4 sheet']],
+      challenge:'Auditing IT equipment means going from section to section, typing asset tags, serial numbers and specs for each item, then consolidating it all. The goal was to <strong>cut typing, standardize the data and record every change</strong>, using a phone and without sending any image outside the internal network.',
+      flow:['Equipment photos','OCR suggests the data','Team reviews and saves','QR label printed','Audit by phone','Excel or PDF report'],
+      built:[
+        ['Registration from photos','Local OCR with Tesseract reads labels and spec screens, accepts iPhone HEIC photos and shows differences for review before saving.'],
+        ['QR code labels','Single labels or A4 sheets with 12 per page. Scanning one opens the item record right on the phone.'],
+        ['Audit mode','Pick a section, scan the QR codes and mark items as found, divergent or not found, with progress and a pending list.'],
+        ['Full history','Section moves, archiving and audit results are recorded, with a reason when required.'],
+        ['Reports','Excel export with the 13 columns and PDF with optional photos, honoring the list filters.'],
+        ['Dashboard and installable app','Dashboard with charts, card layout on phones and a home screen icon.'],
+        ['Security','PBKDF2 password hashing (310k iterations), sessions that expire after 8 hours, CSRF token and separate admin and member accounts.'],
+        ['Backups and operations','Automatic daily database copy, full ZIP backup and Windows utilities for setup and access recovery.']
+      ],
+      stack:['Python','SQLite','JavaScript','HTML5','CSS3','Tesseract OCR','Pillow','openpyxl','ReportLab','PWA'],
+      result:'A <strong>complete pilot for the internal network</strong>: phones and computers share the same database, photo reading speeds up registration and, even without OCR, registration, photos and reports keep working.',
+      learned:['Handling real phone photos, where OCR makes mistakes and people must review','Building a Python HTTP server without a framework, with sessions and access control','Modeling history to audit every change','Generating Excel, PDF and QR codes on the server','Designing for failure: backups, access recovery and working without OCR']
     },
     portal:{
       type:'web • professional project', title:'Institutional Website',
