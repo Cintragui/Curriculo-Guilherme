@@ -95,7 +95,7 @@ const PROJECTS = {
         ['Backups e operação','Cópia automática diária do banco, backup completo em ZIP e utilitários de instalação e recuperação de acesso no Windows.']
       ],
       stack:['Python','SQLite','JavaScript','HTML5','CSS3','Tesseract OCR','Pillow','openpyxl','ReportLab','PWA'],
-      result:'Um <strong>piloto completo para rede interna</strong>: celular e computador usam o mesmo banco de dados, a leitura das fotos acelera o cadastro e, mesmo sem OCR disponível, cadastro, fotos e relatórios continuam funcionando.',
+      result:'Um <strong>sistema completo e já em uso na rede interna</strong>: celular e computador usam o mesmo banco de dados, a leitura das fotos acelera o cadastro e, mesmo sem OCR disponível, cadastro, fotos e relatórios continuam funcionando.',
       learned:['Lidar com fotos reais de celular, em que o OCR erra e a pessoa precisa revisar','Criar um servidor HTTP em Python sem framework, com sessões e controle de acesso','Modelar histórico para auditar cada mudança','Gerar Excel, PDF e QR codes no servidor','Projetar para falhas: backups, recuperação de acesso e funcionamento sem OCR']
     },
     portal:{
@@ -185,7 +185,7 @@ const PROJECTS = {
         ['Backups and operations','Automatic daily database copy, full ZIP backup and Windows utilities for setup and access recovery.']
       ],
       stack:['Python','SQLite','JavaScript','HTML5','CSS3','Tesseract OCR','Pillow','openpyxl','ReportLab','PWA'],
-      result:'A <strong>complete pilot for the internal network</strong>: phones and computers share the same database, photo reading speeds up registration and, even without OCR, registration, photos and reports keep working.',
+      result:'A <strong>complete system already in use on the internal network</strong>: phones and computers share the same database, photo reading speeds up registration and, even without OCR, registration, photos and reports keep working.',
       learned:['Handling real phone photos, where OCR makes mistakes and people must review','Building a Python HTTP server without a framework, with sessions and access control','Modeling history to audit every change','Generating Excel, PDF and QR codes on the server','Designing for failure: backups, access recovery and working without OCR']
     },
     portal:{
